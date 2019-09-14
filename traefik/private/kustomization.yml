@@ -8,3 +8,5 @@ configMapGenerator:
     behavior: replace
     files:
       - traefik.toml
+patchesStrategicMerge:
+  - increase_replicas.yml
