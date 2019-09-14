@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - namespace.yml
+  - traefik.yml
+  - monitoring.yml
+  - metallb.yml
+  - kube-ops-view.yml
+  - kube-monkey.yml
+  - external-dns.yml
+  - bike-touring-tracker.yml
