@@ -3,11 +3,12 @@ kind: Kustomization
 bases:
 - github.com/phillebaba/manifests//traefik/base?ref=update/traefik
 
-resources:
-- configmap.yml
+configMapGenerator:
+- name: traefik-conf
+  files:
+  - traefik.toml
 
 patchesStrategicMerge:
 - patch_deployment.yml
 
-
-#nameSuffix: -private
+nameSuffix: -private
