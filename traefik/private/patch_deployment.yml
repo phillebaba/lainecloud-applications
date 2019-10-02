@@ -4,14 +4,16 @@ metadata:
   name: traefik
 spec:
   replicas: 1
-  volumes:
-    - name: config
-      configMap:
-        name: traefik-conf
-  containers:
-  - name: traefik
-    volumeMounts:
-    - mountPath: "/config"
-      name: "config"
-    args:
-    - --configfile=/config/traefik.toml
+  template:
+    spec:
+      volumes:
+      - name: config
+        configMap:
+          name: traefik-conf
+      containers:
+      - name: traefik
+        volumeMounts:
+        - mountPath: "/config"
+          name: "config"
+        args:
+        - --configfile=/config/traefik.toml
