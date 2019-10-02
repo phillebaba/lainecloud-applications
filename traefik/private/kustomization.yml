@@ -10,5 +10,6 @@ configMapGenerator:
 
 patchesStrategicMerge:
 - patch_deployment.yml
+- patch_service.yml
 
 nameSuffix: -private
