@@ -2,11 +2,13 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: kube-ops-view
+  annotations:
+    kubernetes.io/ingress.class: traefik-private
 spec:
   entryPoints:
     - http
   routes:
-  - match: Host(`kube-ops-view.lainecloud.com`) && PathPrefix(`/notls`)
+  - match: Host(`kube-ops-view.internal.lainecloud.com`)
     kind: Rule
     services:
     - name: kube-ops-view

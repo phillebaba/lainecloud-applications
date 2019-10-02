@@ -1,5 +1,10 @@
 [log]
-  level = "DEBUG"
+  level = "INFO"
+[entryPoints]
+  [entryPoints.http]
+    address = ":80"
+  [entryPoints.https
+    address = ":443"
 [metrics.prometheus]
   buckets = [0.1,0.3,1.2,5.0]
   entryPoint = "metrics"
