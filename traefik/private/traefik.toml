@@ -12,5 +12,5 @@ data:
     [providers.kubernetesCRD]
       ingressClass = "traefik-private"
     [api]
-      insecure = true
-      dashboard = true
+      insecure = "true"
+      dashboard = "true"
