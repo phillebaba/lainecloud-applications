@@ -1,16 +1,10 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: traefik-conf
-data:
-  traefik.toml: |
-    [log]
-      level = "DEBUG"
-    [metrics.prometheus]
-      buckets = [0.1,0.3,1.2,5.0]
-      entryPoint = "metrics"
-    [providers.kubernetesCRD]
-      ingressClass = "traefik-private"
-    [api]
-      insecure = "true"
-      dashboard = "true"
+[log]
+  level = "DEBUG"
+[metrics.prometheus]
+  buckets = [0.1,0.3,1.2,5.0]
+  entryPoint = "metrics"
+[providers.kubernetesCRD]
+  ingressClass = "traefik-private"
+[api]
+  insecure = "true"
+  dashboard = "true"
