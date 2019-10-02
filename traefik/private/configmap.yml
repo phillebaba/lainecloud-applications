@@ -11,3 +11,6 @@ data:
       entryPoint = "metrics"
     [providers.kubernetesCRD]
       ingressClass = "traefik-private"
+    [api]
+      insecure = true
+      dashboard = true
