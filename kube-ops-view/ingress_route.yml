@@ -34,8 +34,6 @@ spec:
   routes:
   - match: Host(`kube-ops-view.lainecloud.com`)
     kind: Rule
-    middlewares:
-      - name: add-dashboard
     services:
     - name: kube-ops-view
       port: 80
