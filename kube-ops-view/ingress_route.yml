@@ -8,7 +8,7 @@ spec:
   entryPoints:
     - http-private
   routes:
-  - match: Host(`kube-ops-view.internal.lainecloud.com`)
+  - match: Host(`kube-ops-view.internal.lainecloud.com`) && Path(`/`)
     kind: Rule
     services:
     - name: kube-ops-view
@@ -24,7 +24,7 @@ spec:
   entryPoints:
     - http-public
   routes:
-  - match: Host(`kube-ops-view.lainecloud.com`)
+  - match: Host(`kube-ops-view.lainecloud.com`) && Path(`/`)
     kind: Rule
     services:
     - name: kube-ops-view
