@@ -32,7 +32,7 @@ spec:
   entryPoints:
     - http-public
   routes:
-  - match: Host(`kube-ops-view.lainecloud.com`) && Path(`/`)
+  - match: Host(`kube-ops-view.lainecloud.com`)
     kind: Rule
     middlewares:
       - name: add-dashboard
