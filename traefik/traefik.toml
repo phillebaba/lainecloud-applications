@@ -1,10 +1,14 @@
 [log]
   level = "INFO"
 [entryPoints]
-  [entryPoints.http]
+  [entryPoints.http-private]
     address = ":80"
-  [entryPoints.https
+  [entryPoints.https-private]
     address = ":443"
+  [entryPoints.http-public]
+    address = ":8000"
+  [entryPoints.https-public]
+    address = ":4443"
 [metrics.prometheus]
   buckets = [0.1,0.3,1.2,5.0]
   entryPoint = "metrics"
