@@ -20,7 +20,7 @@ metadata:
   name: add-dashboard
 spec:
   addPrefix:
-    prefix: #dashboard=true
+    prefix: "#dashboard=true"
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
