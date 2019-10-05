@@ -4,12 +4,16 @@ metadata:
   name: traefik
 spec:
   ports:
-  - port: 80
+  - name: private-http
+    port: 80
     protocol: TCP
-  - port: 443
+  - name: private-https
+    port: 443
     protocol: TCP
-  - port: 8000
+  - name: public-http
+    port: 8000
     protocol: TCP
-  - port: 4443
+  - name: public-https
+    port: 4443
     protocol: TCP
   type: LoadBalancer
