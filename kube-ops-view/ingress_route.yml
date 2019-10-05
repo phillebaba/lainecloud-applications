@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: kube-ops-view
+  name: kube-ops-view-private
   annotations:
     kubernetes.io/ingress.class: traefik-private
 spec:
@@ -17,7 +17,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: kube-ops-view
+  name: kube-ops-view-public
   annotations:
     kubernetes.io/ingress.class: traefik-private
 spec:
