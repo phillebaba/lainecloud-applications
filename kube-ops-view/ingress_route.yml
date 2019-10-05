@@ -15,6 +15,14 @@ spec:
       port: 80
 ---
 apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: add-dashboard
+spec:
+  addPrefix:
+    prefix: #dashboard=true
+---
+apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
   name: kube-ops-view-public
@@ -26,6 +34,8 @@ spec:
   routes:
   - match: Host(`kube-ops-view.lainecloud.com`) && Path(`/`)
     kind: Rule
+    middlewares:
+      - name: add-dashboard
     services:
     - name: kube-ops-view
       port: 80
