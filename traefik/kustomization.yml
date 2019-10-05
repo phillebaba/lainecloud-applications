@@ -3,6 +3,8 @@ kind: Kustomization
 bases:
 - github.com/phillebaba/manifests//traefik/base
 
+namespace: ingress
+
 configMapGenerator:
 - name: traefik-conf
   files:
