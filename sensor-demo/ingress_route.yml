@@ -1,0 +1,17 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: web
+  annotations:
+    kubernetes.io/ingress.class: traefik-private
+spec:
+  entryPoints:
+    - http-public
+  routes:
+  - match: Host(`sensor-demo.lainecloud.com`)
+    kind: Rule
+    services:
+    - name: web
+      port: 80
+
+

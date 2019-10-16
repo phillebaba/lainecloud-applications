@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sensor-demo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/phillebaba/lainecloud-applications.git
+    targetRevision: master
+    path: sensor-demo
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: application
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
