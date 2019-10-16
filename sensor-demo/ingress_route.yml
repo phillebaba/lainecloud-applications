@@ -11,7 +11,7 @@ spec:
   - match: Host(`sensor-demo.lainecloud.com`)
     kind: Rule
     services:
-    - name: web
+    - name: sensor-demo-web
       port: 80
 
 
