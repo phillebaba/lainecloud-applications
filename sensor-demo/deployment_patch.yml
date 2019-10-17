@@ -6,4 +6,4 @@ spec:
   template:
     spec:
       nodeSelector:
-        kubernetes.io/hostname: worker-2
+        kubernetes.io/hostname: worker-1
