@@ -17,6 +17,7 @@ spec:
     spec:
       containers:
       - name: web
+        imagePullPolicy: Always
         env:
         - name: API
           value: sensor-demo-server.lainecloud.com
