@@ -1,5 +1,5 @@
 [log]
-  level = "INFO"
+  level = "DEBUG"
 [entryPoints]
   [entryPoints.http-private]
     address = ":80"
@@ -7,8 +7,14 @@
     address = ":443"
   [entryPoints.http-public]
     address = ":8000"
+    [entryPoints.http-public.transport]
+      [entryPoints.http-public.transport.respondingTimeouts]
+        idleTimeout = 0
   [entryPoints.https-public]
     address = ":4443"
+    [entryPoints.https-public.transport]
+      [entryPoints.https-public.transport.respondingTimeouts]
+        idleTimeout = 0
 [metrics.prometheus]
   buckets = [0.1,0.3,1.2,5.0]
   entryPoint = "metrics"
