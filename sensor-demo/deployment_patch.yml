@@ -7,3 +7,16 @@ spec:
     spec:
       nodeSelector:
         kubernetes.io/hostname: worker-1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  template:
+    spec:
+      containers:
+      - name: web
+        env:
+        - name: API
+          value: sensor-demo-server.lainecloud.com
