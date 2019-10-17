@@ -17,3 +17,5 @@
 [api]
   insecure = "true"
   dashboard = "true"
+[serversTransport.forwardingTimeouts]
+  idleConnTimeout = "0"
