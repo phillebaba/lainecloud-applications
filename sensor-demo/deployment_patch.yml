@@ -20,4 +20,4 @@ spec:
         imagePullPolicy: Always
         env:
         - name: API
-          value: sensor-demo-server.lainecloud.com
+          value: http://sensor-demo-server.lainecloud.com
