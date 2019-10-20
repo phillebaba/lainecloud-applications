@@ -6,7 +6,7 @@ spec:
   template:
     spec:
       nodeSelector:
-        kubernetes.io/hostname: worker-1
+        feature.node.kubernetes.io/usb-2341_0043.present: true
 ---
 apiVersion: apps/v1
 kind: Deployment
