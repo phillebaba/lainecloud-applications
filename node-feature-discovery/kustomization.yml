@@ -8,4 +8,4 @@ namespace: platform
 images:
 - name: quay.io/kubernetes_incubator/node-feature-discovery
   newName: phillebaba/node-feature-discovery-usb
-  newTag: 64ef62f
+  newTag: c6036b9
