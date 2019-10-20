@@ -9,3 +9,6 @@ images:
 - name: quay.io/kubernetes_incubator/node-feature-discovery
   newName: phillebaba/node-feature-discovery-usb
   newTag: c6036b9
+
+patchesStrategicMerge:
+- daemonset_patch.yml

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: nfd-worker
+spec:
+  template:
+    spec:
+      containers:
+      - name: nfd-worker
+        volumeMounts:
+        - mountPath: /etc/kubernetes/node-feature-discovery/source.d/
+          name: source-d
+          $patch: delete
+        - mountPath: /etc/kubernetes/node-feature-discovery/features.d/
+          name: features-d
+          $patch: delete
+      volumes:
+      - hostPath:
+          path: /etc/kubernetes/node-feature-discovery/source.d/
+        name: source-d
+        $patch: delete
+      - hostPath:
+          path: /etc/kubernetes/node-feature-discovery/features.d/
+        name: features-d
+        $patch: delete
+
