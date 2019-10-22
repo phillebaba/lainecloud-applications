@@ -13,6 +13,7 @@ kind: Deployment
 metadata:
   name: web
 spec:
+  replicas: 2
   template:
     spec:
       containers:
@@ -21,3 +22,10 @@ spec:
         env:
         - name: API
           value: http://sensor-demo-server.lainecloud.com
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+spec:
+  replicas: 2
