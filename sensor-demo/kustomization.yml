@@ -11,6 +11,6 @@ namespace: application
 
 images:
 - name: phillebaba/sensor-demo-web
-  newTag: 29973f5
+  newTag: 8edb441
 - name: phillebaba/sensor-demo
-  newTag: 29973f5
+  newTag: 8edb441
