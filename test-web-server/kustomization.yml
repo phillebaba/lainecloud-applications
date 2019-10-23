@@ -5,3 +5,7 @@ bases:
 resources:
 - ingress_route.yml
 namespace: application
+
+images:
+- name: phillebaba/test-web-server
+  newTag: adeeb0c
