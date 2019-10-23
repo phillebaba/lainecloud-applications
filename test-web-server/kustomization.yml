@@ -1,0 +1,7 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+bases:
+- github.com/phillebaba/test-web-server//manifests
+resources:
+- ingress_route.yml
+namespace: application
