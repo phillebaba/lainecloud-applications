@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/phillebaba/lainecloud-applications.git
     targetRevision: master
-    path: test_web_server
+    path: test-web-server
   destination:
     server: https://kubernetes.default.svc
     namespace: applications
