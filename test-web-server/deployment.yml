@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-web-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-web-server
+  template:
+    metadata:
+      labels:
+        app: test-web-server
+    spec:
+      containers:
+      - name: server
+        image: phillebaba/test-web-server:556690f
+        env:
+        - name: MESSAGE
+          value: "Hello Everybody!"
